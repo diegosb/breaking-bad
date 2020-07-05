@@ -1,61 +1,41 @@
 import React from 'react'
-import styled from '@emotion/styled/macro'
-import { keyframes } from '@emotion/core'
-import logo from './logo.svg'
-
-const SpinAnimation = keyframes`
-   from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-`
+import styled from '@emotion/styled'
+import Header from 'components/Header'
+import CharactersList from 'pages/Characters/List'
+import { CharacterProvider } from './store/CharacterContext'
 
 const AppContainer = styled.div`
-  text-align: center;
+  background: linear-gradient(
+    180deg,
+    rgba(54, 148, 87, 1) 0%,
+    rgba(31, 96, 50, 1) 50%,
+    rgba(9, 48, 9, 1) 100%
+  );
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
 `
 
-const Header = styled.header`
-  background-color: #282c34;
-  min-height: 100vh;
+const MainContainer = styled.main`
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-`
-
-const Logo = styled.img`
-  height: 40vmin;
-  pointer-events: none;
-  @media (prefers-reduced-motion: no-preference) {
-    animation: ${SpinAnimation} infinite 20s linear;
-  }
-`
-
-const LinkTag = styled.a`
-  color: #61dafb;
+  align-items: center;
+  width: 90vw;
+  margin: ${({ theme }) => theme.spacing.xl} auto;
 `
 
 function App() {
   return (
     <AppContainer>
-      <Header>
-        <Logo src={logo} alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <LinkTag
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </LinkTag>
-      </Header>
+      <Header />
+      <MainContainer>
+        <CharacterProvider>
+          <CharactersList />
+        </CharacterProvider>
+      </MainContainer>
     </AppContainer>
   )
 }
