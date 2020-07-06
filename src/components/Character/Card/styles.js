@@ -1,5 +1,6 @@
 import styled from '@emotion/styled'
-import { RoundButton } from '../../Button'
+import { RoundButton } from 'components/Button'
+import media from 'theme/media'
 
 export const Card = styled.div`
   width: 100%;
@@ -31,4 +32,7 @@ export const CardContent = styled.div`
 export const ExpandButton = styled(RoundButton)`
   margin-left: auto;
   margin-right: 2rem;
+  ${media.xs`
+    display: none;
+  `};
 `

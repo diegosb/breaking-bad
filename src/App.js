@@ -2,6 +2,7 @@ import React from 'react'
 import styled from '@emotion/styled'
 import Header from 'components/Header'
 import CharactersList from 'pages/Characters/List'
+import media from './theme/media'
 import { CharacterProvider } from './store/CharacterContext'
 
 const AppContainer = styled.div`
@@ -25,6 +26,9 @@ const MainContainer = styled.main`
   align-items: center;
   width: 90vw;
   margin: ${({ theme }) => theme.spacing.xl} auto;
+  ${({ theme }) => media.xs`
+    margin: ${theme.spacing.sm} auto;
+  `}
 `
 
 function App() {

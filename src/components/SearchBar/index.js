@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from '@emotion/styled'
+import media from 'theme/media'
 
 const SearchInput = styled.input`
   width: 100%;
@@ -13,6 +14,9 @@ const SearchInput = styled.input`
   ::placeholder {
     color: ${({ theme }) => theme.colors.grey.regular};
   }
+  ${media.xs`
+    font-size: 1rem;
+   `};
 `
 
 const SearchBar = ({ onChange, value, ...props }) => (
