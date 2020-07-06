@@ -13,7 +13,7 @@ const ListContainer = styled.section`
   max-width: 600px;
 `
 
-const List = () => {
+const Index = () => {
   const [searchName, setSearchName] = useState('')
   const { listOfCharacters } = useCharacterState()
   const dispatch = useCharacterDispatch()
@@ -59,4 +59,4 @@ const List = () => {
   )
 }
 
-export default List
+export default Index

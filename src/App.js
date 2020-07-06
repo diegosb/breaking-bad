@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import Header from 'components/Header'
-import CharactersList from 'pages/Characters/List'
+import CharactersList from 'pages/Characters'
 import media from './theme/media'
 import { CharacterProvider } from './store/CharacterContext'
 

@@ -66,11 +66,12 @@ const ExpandedCharacterCard = ({ index, onClick, item }) => {
         onKeyDown={(e) => onPressEscKey(e, onClickHandler)}
         onClick={onClickHandler}
         ref={expandedCard}
+        data-testid="expanded-card"
       >
         <Flipped inverseFlipId={flipId}>
           <ExpandedCardContent>
             <Flipped flipId={`avatar-${index}`} stagger="card-content" delayUntil={flipId}>
-              <Avatar src={item.img} alt={item.name} size="large" loading="lazy" />
+              <Avatar src={item.img} alt={item.nickname} size="large" loading="lazy" />
             </Flipped>
             <Flipped flipId={`description-${index}`} stagger="card-content" delayUntil={flipId}>
               <CharacterDetails>

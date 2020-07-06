@@ -19,6 +19,7 @@ const CharacterCard = ({ index, onClick, item }) => {
         tabIndex={0}
         onKeyDown={(e) => onPressEnterKey(e, onClickHandler)}
         onClick={onClickHandler}
+        data-testid="character-card"
       >
         <Flipped inverseFlipId={flipId}>
           <CardContent>
@@ -28,7 +29,7 @@ const CharacterCard = ({ index, onClick, item }) => {
               shouldFlip={shouldFlip(index)}
               delayUntil={flipId}
             >
-              <Avatar src={item.img} alt={item.name} loading="lazy" />
+              <Avatar src={item.img} alt={item.nickname} loading="lazy" />
             </Flipped>
             <Flipped
               flipId={`description-${index}`}

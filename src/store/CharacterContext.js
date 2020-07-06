@@ -18,9 +18,9 @@ function characterReducer(state, action) {
   }
 }
 
-function CharacterProvider({ children }) {
+function CharacterProvider({ children, initialValue }) {
   const [state, dispatch] = React.useReducer(characterReducer, {
-    listOfCharacters: [],
+    listOfCharacters: initialValue || [],
   })
 
   return (

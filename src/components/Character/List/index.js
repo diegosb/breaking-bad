@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import { Flipper } from 'react-flip-toolkit'
 import UL from 'components/List'
@@ -6,7 +6,7 @@ import ExpandedCard from '../ExpandedCard'
 import Card from '../Card'
 
 const CharactersList = ({ characters }) => {
-  const [focused, setFocused] = React.useState(null)
+  const [focused, setFocused] = useState(null)
 
   function onClick(index) {
     setFocused(focused === index ? null : index)

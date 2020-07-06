@@ -34,7 +34,6 @@ export const ExpandedCardContent = styled.div`
   `}
 `
 export const CharacterDetails = styled.section`
-  background: ${({ theme }) => theme.colors.white};
   align-self: stretch;
   padding: 2rem 2rem 2rem 0;
   display: flex;
@@ -52,7 +51,8 @@ export const CharacterDetails = styled.section`
   > section:nth-of-type(3) {
     animation-delay: 0.3s;
   }
-  ${media.xs`
+  ${({ theme }) => media.xs`
+    background: ${theme.colors.white};
     padding: 2rem;
     transform: translateY(-130px);
     z-index: 2;

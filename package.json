@@ -22,9 +22,9 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --env=jsdom-fourteen",
     "eject": "react-scripts eject",
-    "test:staged": "cross-env CI=true react-scripts test --env=jsdom --findRelatedTests",
+    "test:staged": "cross-env CI=true react-scripts test --env=jsdom-fourteen --findRelatedTests",
     "lint": "eslint --ext .js --ignore-path .gitignore ."
   },
   "eslintConfig": {

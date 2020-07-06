@@ -20,7 +20,7 @@ const SearchInput = styled.input`
 `
 
 const SearchBar = ({ onChange, value, ...props }) => (
-  <SearchInput onChange={onChange} value={value} {...props} />
+  <SearchInput onChange={onChange} value={value} aria-label="Search Character" {...props} />
 )
 
 SearchBar.propTypes = {
