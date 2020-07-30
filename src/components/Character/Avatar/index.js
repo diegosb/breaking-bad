@@ -4,6 +4,7 @@ import media from 'theme/media'
 export default styled.img`
   border-radius: 4px;
   background-color: ${({ theme }) => theme.colors.grey.light};
+  object-fit: cover;
   ${({ size }) => {
     if (size === 'large') {
       return `
